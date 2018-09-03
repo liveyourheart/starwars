@@ -1,5 +1,7 @@
 .summary {
   padding: 3px;
   margin: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
   border: solid blue;
 }
