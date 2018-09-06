@@ -1,7 +1,43 @@
+body {
+  background-color: #232323;
+}
+
 .summary {
   padding: 3px;
   margin: 5px;
   margin-left: 10%;
   margin-right: 10%;
-  border: solid blue;
+  border: solid yellow;
+  color: lightblue;
+}
+
+a:link {
+  color: lightblue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(23, 130, 165);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.route-link {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  background-color: yellow !important;
+  color: #232323 !important;
+  font-size: 150%;
+}
+
+.header h1 {
+  margin-top: 0;
 }
