@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default class RouteLink extends Component {
   render() {
@@ -12,3 +13,8 @@ export default class RouteLink extends Component {
     );
   }
 }
+
+RouteLink.PropTypes = {
+  link: PropTypes.string,
+  text: PropTypes.string
+};

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class InfoLabel extends Component {
   render() {
@@ -21,3 +22,9 @@ export default class InfoLabel extends Component {
     );
   }
 }
+
+InfoLabel.PropTypes = {
+  isHeading: PropTypes.bool,
+  label: PropTypes.string,
+  data: PropTypes.string
+};
