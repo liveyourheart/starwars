@@ -6,10 +6,11 @@ import RouteLink from "../shared/RouteLink";
 export default class CharacterDetail extends Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
       character: {
         name: "",
-        birth_year: 0,
+        birth_year: "",
         height: 0,
         mass: 0,
         hair_color: "",
@@ -37,17 +38,19 @@ export default class CharacterDetail extends Component {
       films
     } = this.state.character;
     return (
-      <React.Fragment>
-        <div className="summary">
-          <InfoLabel label="Name" data={name} isHeading={true} />
-          <InfoLabel label="Birth Year" data={birth_year} />
-          <InfoLabel label="Height" data={height} />
-          <InfoLabel label="Mass" data={mass} />
-          <InfoLabel label="Hair Color" data={hair_color} />
-          <InfoLabel label="Eye Color" data={eye_color} />
-        </div>
-        <RouteLink text="Back" link="/characters" />
-      </React.Fragment>
+      name && (
+        <React.Fragment>
+          <div className="summary">
+            <InfoLabel label="Name" data={name} isHeading={true} />
+            <InfoLabel label="Birth Year" data={birth_year} />
+            <InfoLabel label="Height" data={height} />
+            <InfoLabel label="Mass" data={mass} />
+            <InfoLabel label="Hair Color" data={hair_color} />
+            <InfoLabel label="Eye Color" data={eye_color} />
+          </div>
+          <RouteLink text="Back" link="/characters" />
+        </React.Fragment>
+      )
     );
   }
 }
